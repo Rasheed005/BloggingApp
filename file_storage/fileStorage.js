@@ -3,11 +3,18 @@ import fs from 'fs';
 const FILE_PATH = 'data/blogs.json';
 import { v4 as uuid4 } from 'uuid';
 
-export function findAll() {
+export function findAll( page=1 , limit=7) {
   const data = fs.readFileSync(FILE_PATH);
-  return JSON.parse(data);
-}
+  const parasedData = JSON.parse(data);
 
+    // Calculate start and end indices
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit; 
+  
+    // Return the paginated slice of data
+    return parasedData.slice(startIndex, endIndex);
+}
+ 
 export function findById(id) {
   let data;
   

@@ -1,6 +1,8 @@
 import { User } from '../../models/userSchema.js';
 import jwt from 'jsonwebtoken';
 
+
+
 export async function login(req, res) {
   const tokenValidFor = 60 * 30; // 30 mins
   const secret = process.env.APP_SECRET;
