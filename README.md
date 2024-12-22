@@ -1,6 +1,7 @@
 # Blogging API
 
-This is a basic CRUD application using express, no database, but file storage.
+This is a basic CRUD application using express, mongoDB database, and file storage .
+it uses a user based role
 
 ## Installation
 after a successful clone, run the following command to install dependencies.

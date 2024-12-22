@@ -45,6 +45,7 @@ export async function sessionLogin(req, res) {
   }
 }
 
+
 export const clearCookie = (req, res) => {
   res.clearCookie(process.env.SESSION_NAME);
   res.send({ success: true });
